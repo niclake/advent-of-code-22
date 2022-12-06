@@ -41,6 +41,8 @@ def calculate_score(my_play, opponent_play)
     loss: 0
   }
 
+  # This having to be parked in here sucks
+  # Is there a way to make this a global hash?
   beats = {
     rock: :paper,
     paper: :scissors,

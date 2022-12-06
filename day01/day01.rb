@@ -3,7 +3,7 @@
 elf_calories = []
 calories = 0
 
-File.foreach("day1input.txt") do |line|
+File.foreach("day01input.txt") do |line|
   if line.to_i == 0
     elf_calories << calories
     calories = 0

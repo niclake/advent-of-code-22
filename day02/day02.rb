@@ -79,6 +79,8 @@ desired_outcome = {
   win: "Z"
 }
 
+# Re-declaring this so it can be used below
+# Frustrating that it can't stay global all the time
 beats = {
   rock: :paper,
   paper: :scissors,

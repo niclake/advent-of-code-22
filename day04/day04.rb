@@ -34,3 +34,5 @@ File.foreach("day04input.txt") do |line|
 end
 
 puts any_overlap_counter
+
+# Part two answer: 921

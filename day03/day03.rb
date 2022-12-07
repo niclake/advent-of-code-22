@@ -8,7 +8,7 @@
 def intersect_value(first, second, third = nil)
   # When creating priority_value, using & at the start to push the string length by one
   # so that when fetching it, I don't have to +1
-  priority_value = "&abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  priorities = [*'a'..'z', *'A'..'Z']
 
   if !third.nil?
     intersect = first.split('') & second.split('') & third.split('')
@@ -16,7 +16,7 @@ def intersect_value(first, second, third = nil)
     intersect = first.split('') & second.split('')
   end
 
-  priority_value.index(intersect[0])
+  priorities.index(intersect[0]) + 1
 end
 
 total_priorities = 0

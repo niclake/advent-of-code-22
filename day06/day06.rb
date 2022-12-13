@@ -1,10 +1,11 @@
 File.foreach("day06input.txt") do |line|
-  line.chars.each_with_index do |_char, index|
-    next if index < 13
+  line.chars.each.with_index(1) do |_char, index|
+    req_length = 14 # was 4
+    next if index < req_length
 
-    check_this = line[index-13..index]
-    if check_this.chars.uniq.count == check_this.length
-      p "#{check_this} at position #{index + 1}"
+    check_this = line[index-req_length..index]
+    if check_this.chars.uniq.count == req_length
+      p "#{check_this} at position #{index}"
       break
     end
   end
